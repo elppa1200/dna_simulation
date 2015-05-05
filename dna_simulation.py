@@ -15,7 +15,7 @@ def dnaID (N):
    erfolg = "false"
    while (erfolg == "false"):
     ID = random.randrange(1, N)
-    if ID in change_IDs:)
+    if ID in change_IDs:
        nana = 'pointless' #do nothing
     else:
        erfolg = "true"
