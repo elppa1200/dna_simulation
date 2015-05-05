@@ -3,8 +3,8 @@
 ###         GNU General Public License                   ###
 import random 
 import time
-DNA_sequence = raw.input("DNA_sequence>")
-ticks = raw.input("Ticks>")
+DNA_sequence = input("DNA_sequence>")
+ticks = input("Ticks>")
 N = len(DNA_sequence)
 N = int(N)
 change_IDs = []
