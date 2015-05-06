@@ -1,11 +1,8 @@
-####script to simulate evolution of a single DNA_sequence###
-#         code by Alexander Kehr, 2015                     #
-###         GNU General Public License                   ###
 import random 
 import time
-DNA_sequence = raw_input("DNA_sequence>")
+dna_sequence = raw_input("DNA_sequence>")
 ticks = raw_input("Ticks>")
-N = len(DNA_sequence)
+N = len(dna_sequence)
 N = int(N)
 change_IDs = []
 counter = int(0)
@@ -32,7 +29,55 @@ def changeInto():
        return("H")
 def wipevalues():
    change_IDs = []
+def checkdna(dna_sequence):
+    if 'B' in dna_sequence:
+	    return 'err'
+    elif 'C' in dna_sequence:
+	    return 'err'
+    elif 'D' in dna_sequence:
+	    return 'err'
+    elif 'E' in dna_sequence:
+	    return 'err'
+    elif 'F' in dna_sequence:
+	    return 'err'
+    elif 'I' in dna_sequence:
+	    return 'err'
+    elif 'J' in dna_sequence:
+	    return 'err'
+    elif 'K' in dna_sequence:
+	    return 'err'
+    elif 'L' in dna_sequence:
+	    return 'err'
+    elif 'M' in dna_sequence:
+	    return 'err'
+    elif 'N' in dna_sequence:
+	    return 'err'
+    elif 'O' in dna_sequence:
+	    return 'err'
+    elif 'P' in dna_sequence:
+	    return 'err'
+    elif 'Q' in dna_sequence:
+	    return 'err'
+    elif 'R' in dna_sequence:
+        return 'err'
+    elif 'S' in dna_sequence:
+	    return 'err'
+    elif 'U' in dna_sequence:
+	    return 'err'
+    elif 'V' in dna_sequence:
+	    return 'err'
+    elif 'W' in dna_sequence:
+	    return 'err'
+    elif 'X' in dna_sequence:
+	    return 'err'
+    elif 'Y' in dna_sequence:
+	    return 'err'
+    elif 'Z' in dna_sequence:
+	    return 'err'
 for i in range(int(ticks)):
+    if checkdna(dna_sequence) == 'err':
+        print("DNA contains errors: " + dna_sequence)
+        break
     counter = counter + 1
     print("[STAGE " + str(counter) + "]")
     haufigkeit = dna_changeH(N)
@@ -44,11 +89,11 @@ for i in range(int(ticks)):
         ch_ID = change_IDs.pop()
         int(ch_ID)
         ch_ID1 = ch_ID - 1
-        DNA_part1 = DNA_sequence[0:ch_ID1]
-        DNA_part2 = DNA_sequence[ch_ID:99999]
-        DNA_sequence = DNA_part1 + changeInto() + DNA_part2
+        DNA_part1 = dna_sequence[0:ch_ID1]
+        DNA_part2 = dna_sequence[ch_ID:99999]
+        dna_sequence = DNA_part1 + changeInto() + DNA_part2
     print("")
-    print("##new DNA: " + DNA_sequence + "##")
+    print("##new DNA: " + dna_sequence + "##")
     print("")
     change_IDs = []
     time.sleep(3)
