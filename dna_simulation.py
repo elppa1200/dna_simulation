@@ -1,3 +1,6 @@
+####script to simulate evolution of a single DNA_sequence###
+#         code by Alexander Kehr, 2015                     #
+###         GNU General Public License                   ###
 import random 
 import time
 dna_sequence = raw_input("DNA_sequence>")
