@@ -1,6 +1,18 @@
-####script to simulate evolution of a single DNA_sequence###
-#         code by Alexander Kehr, 2015                     #
-###         GNU General Public License                   ###
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of the GNU General Public License as published by
+#the Free Software Foundation, either version 3 of the License, or
+#(at your option) any later version.
+
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU General Public License for more details.
+
+#You should have received a copy of the GNU General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+#Created by Alexander Kehr
+
 import random 
 import time
 dna_sequence = raw_input("DNA_sequence>")
@@ -84,7 +96,7 @@ for i in range(int(ticks)):
     counter = counter + 1
     print("[STAGE " + str(counter) + "]")
     haufigkeit = dna_changeH(N)
-    print("Haufigkeit:" + str(haufigkeit))
+    print("Haufigkeit: " + str(haufigkeit))
     for i in range(haufigkeit):
         dnaID(N)
     print(change_IDs)
@@ -96,7 +108,7 @@ for i in range(int(ticks)):
         DNA_part2 = dna_sequence[ch_ID:99999]
         dna_sequence = DNA_part1 + changeInto() + DNA_part2
     print("")
-    print("##new DNA: " + dna_sequence + "##")
+    print("## new DNA: " + dna_sequence + " ##")
     print("")
     change_IDs = []
     time.sleep(3)
